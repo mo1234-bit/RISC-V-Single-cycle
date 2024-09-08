@@ -8,6 +8,9 @@ output [31:0]RD;
 reg[31:0]MEM[1023:0];
 
 assign RD =(rst==1)?0:MEM[A[31:2]] ;
+  initial begin
+$readmemh("MEM_FILE.hex",MEM);
+end
 // initial begin
 // 	 MEM[0]=32'h0064a423;
 // 	 MEM[1]=32'h00c58000;
