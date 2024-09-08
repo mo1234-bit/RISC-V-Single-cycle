@@ -16,13 +16,16 @@ always @(posedge clk) begin
 	
 end
 initial begin
-	register[9]=32'h00000020;
-	register[6]=32'h00000040;
-	register[11]=32'h00000028;
-	register[12]=32'h00000030;
-	register[5]=32'h00000025;
-   
+$readmemh("MEM_FILE.hex",MEM);
 end
+//initial begin
+//	register[9]=32'h00000020;
+//	register[6]=32'h00000040;
+//	register[11]=32'h00000028;
+//	register[12]=32'h00000030;
+//	register[5]=32'h00000025;
+   
+//end
 endmodule
 
 
