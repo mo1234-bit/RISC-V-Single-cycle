@@ -12,11 +12,11 @@ reg rst,clk;
 end
 integer i=0;
 initial begin
-	rst=1;
+	rst=0;
 	
 	for(i=0;i<100;i=i+1)begin
 	@(negedge clk);
-	rst=0;
+	rst=1;
 	end
 
 	$stop;
