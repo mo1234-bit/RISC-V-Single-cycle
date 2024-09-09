@@ -4,7 +4,7 @@ input clk,rst;
 output reg[31:0]PC;
 
 always @(posedge clk) begin
-	if (rst) begin
+	if (~rst) begin
 	PC<=0;
 		
 	end
